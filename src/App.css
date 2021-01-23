@@ -1,38 +1,98 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;800&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  font-family: "Manrope", sans-serif;
+  font-weight: 500;
+  color: #18191f;
+  font-size: 1.125rem;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.big-text {
+  font-size: 3rem;
+  margin: 2rem 0;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.main {
+  max-width: 90%;
+  width: 100%;
+  margin: 0 auto;
+}
+.wrapper {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.news-box {
+  max-width: 24%;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+.news-image {
+  max-width: 100%;
+  width: 100%;
+  display: block;
+  height: auto;
+  height: 12rem;
+  object-fit: cover;
+  margin-bottom: 0.6rem;
+  border-radius: 0.4rem;
+}
+.news-title {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.news-text {
+  color: #18191f;
+  /* font-size: 18px; */
+}
+
+.load-button {
+  width: 10rem;
+  display: block;
+  margin: 2rem auto;
+  background-color: blue;
+  color: #fff;
+  text-align: center;
+  border: 1px solid #fff;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-size: 1.2rem;
+  border-radius: 0.3rem;
+}
+.loader {
+  min-height: 100vh;
+  background-color: #fff;
+  color: #18191f;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  z-index: 99;
+}
+.loader h2 {
+  font-size: 3rem;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media screen and (max-width: 1024px) {
+  .news-box {
+    max-width: 49%;
   }
-  to {
-    transform: rotate(360deg);
+  .big-text {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .news-box {
+    max-width: 95%;
   }
 }
