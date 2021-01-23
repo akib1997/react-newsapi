@@ -1,10 +1,9 @@
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect } from "react";
 import Axios from "axios";
 import NewsBox from "./NewsBox";
 import Loader from "./Loader";
 
 const Wrapper = () => {
-  //   const apiKey = "0267e3515dae484b9335e3d1ec873f3f";
   const url =
     "http://newsapi.org/v2/top-headlines?" +
     "country=us&" +
@@ -14,16 +13,17 @@ const Wrapper = () => {
   const [loading, setLoading] = useState(true);
   const [show, setShow] = useState(4);
 
-  const fechData = useCallback(async () => {
+  const fechData = async () => {
     await Axios.get(url)
       .then((response) => setData(response.data.articles))
       .catch((error) => console.log(error));
     setLoading(false);
-  }, []);
+  };
 
   useEffect(() => {
     fechData();
-  }, [fechData]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const loadMore = () => {
     setShow(show + 4);
