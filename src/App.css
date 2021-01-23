@@ -1,8 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;800&display=swap");
 
-* {
+*,
+*::after,
+*::before {
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -21,6 +24,10 @@ body {
   margin: 0 auto;
 }
 .wrapper {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -38,17 +45,12 @@ body {
   height: 12rem;
   object-fit: cover;
   margin-bottom: 0.6rem;
-  border-radius: 0.4rem;
+  border-radius: 0.3rem;
 }
 .news-title {
   font-size: 1.6rem;
   font-weight: 600;
   margin-bottom: 0.5rem;
-}
-
-.news-text {
-  color: #18191f;
-  /* font-size: 18px; */
 }
 
 .load-button {
@@ -73,6 +75,10 @@ body {
   height: 100%;
   top: 0;
   left: 0;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   align-items: center;
   justify-content: center;
