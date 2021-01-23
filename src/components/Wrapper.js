@@ -5,7 +5,7 @@ import Loader from "./Loader";
 
 const Wrapper = () => {
   const url =
-    "http://newsapi.org/v2/top-headlines?" +
+    "https://newsapi.org/v2/top-headlines?" +
     "country=us&" +
     "apiKey=0267e3515dae484b9335e3d1ec873f3f";
 
